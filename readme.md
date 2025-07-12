@@ -1,6 +1,9 @@
 # ReWear - Sustainable Fashion Marketplace
 A platform for swapping clothes and fashion items using a point-based system to promote sustainable fashion.
 
+#VIDEO LINK 
+https://drive.google.com/file/d/1aQcPIwivcHBDoIiWIe6pB2L9RgW37TuO/view?usp=drivesdk
+
 ## Team Members (Team 1775)
 
 - **Akash Anand**
