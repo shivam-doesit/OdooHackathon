@@ -28,6 +28,10 @@ https://drive.google.com/file/d/1aQcPIwivcHBDoIiWIe6pB2L9RgW37TuO/view?usp=drive
 - **Animation**: Framer Motion
 - **Notifications**: React Hot Toast
 
+## Authentication
+
+The project supports user registration and login through the Express API. Successful authentication returns a JWT, which the frontend uses to restore authenticated sessions. The protected `GET /api/auth/me` endpoint returns the current authenticated user.
+
 ## Installation
 
 1. Clone the repository:
