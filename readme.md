@@ -4,13 +4,6 @@ A platform for swapping clothes and fashion items using a point-based system to 
 #VIDEO LINK 
 https://drive.google.com/file/d/1aQcPIwivcHBDoIiWIe6pB2L9RgW37TuO/view?usp=drivesdk
 
-## Team Members (Team 1775)
-
-- **Akash Anand**
-- **Anurag Anand Karn**
-- **Peus Raj Singh**
-- **Shivam Yadav**
-
 ## Features
 
 - 🛍️ **Item Listings**: Users can list clothing items with images, descriptions, and point values
