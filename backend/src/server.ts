@@ -8,17 +8,26 @@ dotenv.config(); // Ensure environment variables are loaded
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 if (!MONGO_URI) {
   console.error('MONGO_URI is not defined in .env');
   process.exit(1);
 }
 
+if (!JWT_SECRET) {
+  console.error('JWT_SECRET is not defined in environment configuration');
+  process.exit(1);
+}
+
+const clientOrigins = process.env.CLIENT_ORIGIN?.split(',').map((origin) => origin.trim()).filter(Boolean)
+  ?? ['http://localhost:5173'];
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*', // Adjust as needed for security
-    methods: ['GET', 'POST']
+    origin: clientOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
   }
 });
 

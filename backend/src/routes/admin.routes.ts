@@ -8,4 +8,4 @@ router.get('/items', (req, res) => res.send('Get all items'));
 router.put('/block/:userId', (req, res) => res.send('Block user'));
 router.delete('/item/:itemId', (req, res) => res.send('Remove spam item'));
 
-export default
+export default router;

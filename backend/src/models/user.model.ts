@@ -6,6 +6,9 @@ export interface IUser extends Document {
   password: string;
   role: 'user' | 'admin';
   blocked: boolean;
+  points: number;
+  avatar?: string;
+  createdAt: Date;
 }
 
 const UserSchema = new Schema<IUser>({
@@ -13,7 +16,9 @@ const UserSchema = new Schema<IUser>({
   email:    { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role:     { type: String, enum: ['user', 'admin'], default: 'user' },
-  blocked:  { type: Boolean, default: false }
-});
+  blocked:  { type: Boolean, default: false },
+  points:   { type: Number, default: 50 },
+  avatar:   { type: String }
+}, { timestamps: true });
 
 export default mongoose.model<IUser>('User', UserSchema);
