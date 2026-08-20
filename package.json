@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server:dev": "npm run dev --prefix backend",
+    "server:build": "npm run build --prefix backend",
+    "server:start": "npm run start --prefix backend"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -54,7 +57,7 @@
     "typescript-eslint": "^8.3.0",
     "vite": "^7.0.4"
   },
-  "description": "",
+  "description": "A platform for swapping clothes and fashion items using a point-based system to promote sustainable fashion.",
   "main": "eslint.config.js",
   "repository": {
     "type": "git",

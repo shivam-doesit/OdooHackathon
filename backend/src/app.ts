@@ -10,7 +10,9 @@ import adminRoutes from './routes/admin.routes';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+const clientOrigins = process.env.CLIENT_ORIGIN?.split(',').map((origin) => origin.trim()).filter(Boolean)
+  ?? ['http://localhost:5173'];
+app.use(cors({ origin: clientOrigins }));
 app.use(express.json());
 
 // Register all routes
